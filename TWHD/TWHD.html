@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/white-hatStyle.css" />
+    <title>The White-Hat's Den</title>
+  </head>
+  <body>
+    <div id="workflow-container">
+      <button
+        class="workflow-node"
+        onclick="showToolSummary('Pre-Engagement')"
+        id="nodePreEngagement"
+      >
+        Pre-Engagement
+      </button>
+      <div id="branchPreEngagement" class="workflow-branch">
+        <button
+          class="workflow-node"
+          onclick="showToolSummary('Define Scope')"
+          id="nodeDefineScope"
+        >
+          Define Scope
+        </button>
+        <!-- <div id="subBranchDefineScope" class="workflow-sub-branch">
+          <button class="workflow-node" onclick="showToolSummary('Sub-Node1')">
+            Sub-Node1
+          </button>
+          <button class="workflow-node" onclick="showToolSummary('Sub-Node2')">
+            Sub-Node2
+          </button>
+          <button class="workflow-node" onclick="showToolSummary('Sub-Node3')">
+            Sub-Node3
+          </button>
+        </div> -->
+        <button
+          class="workflow-node"
+          id="nodeRulesEngagement"
+          onclick="showToolSummary('Rules of Engagement')"
+        >
+          Rules of Engagement
+        </button>
+        <!-- <div id="subBranchRulesEngagement" class="workflow-sub-branch">
+          <button class="workflow-node" onclick="showToolSummary('Sub-Node1')">
+            Sub-Node1
+          </button>
+          <button class="workflow-node" onclick="showToolSummary('Sub-Node2')">
+            Sub-Node2
+          </button>
+          <button class="workflow-node" onclick="showToolSummary('Sub-Node3')">
+            Sub-Node3
+          </button>
+        </div> -->
+        <button
+          class="workflow-node"
+          id="nodeGatherInformation"
+          onclick="showToolSummary('Gather Information')"
+        >
+          Gather Information
+        </button>
+        <!-- <div id="subBranchGatherInformation" class="workflow-sub-branch">
+          <button class="workflow-node" onclick="showToolSummary('Sub-Node1')">
+            Sub-Node1
+          </button>
+          <button class="workflow-node" onclick="showToolSummary('Sub-Node2')">
+            Sub-Node2
+          </button>
+          <button class="workflow-node" onclick="showToolSummary('Sub-Node3')">
+            Sub-Node3
+          </button>
+        </div> -->
+      </div>
+
+      <button
+        class="workflow-node"
+        id="nodeReconnaissance"
+        onclick="showToolSummary('Reconnaissance')"
+      >
+        Reconnaissance
+      </button>
+      <div id="branchReconnaissance" class="workflow-branch">
+        <button
+          class="workflow-node"
+          id="nodePassiveReconnaissance"
+          onclick="showToolSummary('Passive Reconnaissance')"
+        >
+          Passive Reconnaissance
+        </button>
+        <div id="subBranchPassiveReconnaissance" class="workflow-sub-branch">
+          <button class="workflow-node" onclick="showToolSummary('DNS Interrogation')">
+            DNS Interrogation
+          </button>
+          <button class="workflow-node" onclick="showToolSummary('WHOIS Lookups')">
+            WHOIS Lookups
+          </button>
+          <button class="workflow-node" onclick="showToolSummary('Network Traffic Analysis')">
+            Network Traffic Analysis
+          </button>
+          <button class="workflow-node" onclick="showToolSummary('Passive OS Fingerprinting')">
+            Passive OS Fingerprinting
+          </button>
+          <button class="workflow-node" onclick="showToolSummary('Search Engine Queries')">
+            Search Engine Queries
+          </button>
+          <button class="workflow-node" onclick="showToolSummary('Social Media Analysis')">
+            Social Media Analysis
+          </button>
+          <button class="workflow-node" onclick="showToolSummary('Job Postings and Career Pages')">
+            Job Postings and Career Pages
+          </button>
+          <button class="workflow-node" onclick="showToolSummary('Email Footprinting')">
+            Email Footprinting
+          </button>
+          <button class="workflow-node" onclick="showToolSummary('Certificate Transparency Logs')">
+            Certificate Transparency Logs
+          </button>
+        </div>
+        <button
+          class="workflow-node"
+          id="nodeActiveReconnaissance"
+          onclick="showToolSummary('Active Reconnaissance')"
+        >
+          Active Reconnaissance
+        </button>
+        <div id="subBranchActiveReconnaissance" class="workflow-sub-branch">
+          <button class="workflow-node" onclick="showToolSummary('Tool5')">
+            Tool5
+          </button>
+          <button class="workflow-node" onclick="showToolSummary('Tool6')">
+            Tool6
+          </button>
+          <button class="workflow-node" onclick="showToolSummary('Tool7')">
+            Tool7
+          </button>
+          <button class="workflow-node" onclick="showToolSummary('Tool8')">
+            Tool8
+          </button>
+        </div>
+      </div>
+
+      <button
+        class="workflow-node"
+        id="nodeScanning"
+        onclick="showToolSummary('Scanning')"
+      >
+        Scanning
+      </button>
+      <div id="branchScanning" class="workflow-branch">
+        <button
+          class="workflow-node"
+          id="nodeNetworkScanning"
+          onclick="showToolSummary('Network Scanning')"
+        >
+          Network Scanning
+        </button>
+        <div id="subBranchNetworkScanning" class="workflow-sub-branch">
+          <button class="workflow-node" onclick="showToolSummary('Nmap')">
+            Nmap
+          </button>
+          <button class="workflow-node" onclick="showToolSummary('Wireshark')">
+            Wireshark
+          </button>
+          <button class="workflow-node" onclick="showToolSummary('Burp Suite')">
+            Burp Suite
+          </button>
+          <button class="workflow-node" onclick="showToolSummary('Zenmap')">
+            Zenmap
+          </button>
+        </div>
+        <button
+          class="workflow-node"
+          id="nodeVulnerabilityScanning"
+          onclick="showToolSummary('Vulnerability Scanning')"
+        >
+          Vulnerability Scanning
+        </button>
+        <div id="subBranchVulnerabilityScanning" class="workflow-sub-branch">
+          <button class="workflow-node" onclick="showToolSummary('Nessus')">
+            Nessus
+          </button>
+          <button class="workflow-node" onclick="showToolSummary('OpenVAS')">
+            OpenVAS
+          </button>
+          <button class="workflow-node" onclick="showToolSummary('Nexpose')">
+            Nexpose
+          </button>
+          <button class="workflow-node" onclick="showToolSummary('Qualys')">
+            Qualys
+          </button>
+        </div>
+      </div>
+
+      <button
+        class="workflow-node"
+        id="nodeGainingAccess"
+        onclick="showToolSummary('Gaining Access')"
+      >
+        Gaining Access
+      </button>
+      <div id="branchGainingAccess" class="workflow-branch">
+        <button
+          class="workflow-node"
+          id="nodeExploitation"
+          onclick="showToolSummary('Exploitation')"
+        >
+          Exploitation
+        </button>
+        <div id="subBranchExploitation" class="workflow-sub-branch">
+          <button class="workflow-node" onclick="showToolSummary('Metasploit')">
+            Metasploit
+          </button>
+          <button class="workflow-node" onclick="showToolSummary('Canvas')">
+            Canvas
+          </button>
+          <button
+            class="workflow-node"
+            onclick="showToolSummary('Core Impact')"
+          >
+            Core Impact
+          </button>
+          <button class="workflow-node" onclick="showToolSummary('BeEF')">
+            BeEF
+          </button>
+        </div>
+        <button
+          class="workflow-node"
+          id="nodePasswordAttacks"
+          onclick="showToolSummary('Password Attacks')"
+        >
+          Password Attacks
+        </button>
+        <div id="subBranchPasswordAttacks" class="workflow-sub-branch">
+          <button
+            class="workflow-node"
+            onclick="showToolSummary('John The Ripper')"
+          >
+            John The Ripper
+          </button>
+          <button class="workflow-node" onclick="showToolSummary('Hashcat')">
+            Hashcat
+          </button>
+          <button
+            class="workflow-node"
+            onclick="showToolSummary('Cain and Abel')"
+          >
+            Cain and Abel
+          </button>
+          <button class="workflow-node" onclick="showToolSummary('THC Hydra')">
+            THC Hydra
+          </button>
+        </div>
+      </div>
+
+      <button
+        class="workflow-node"
+        id="nodeMaintainingAccess"
+        onclick="showToolSummary('Maintaining Access')"
+      >
+        Maintaining Access
+      </button>
+      <div id="branchMaintainingAccess" class="workflow-branch">
+        <button
+          class="workflow-node"
+          id="nodeEstablishPersistence"
+          onclick="showToolSummary('Establish Persistence')"
+        >
+          Establish Persistence
+        </button>
+        <div id="subBranchEstablishPersistence" class="workflow-sub-branch">
+          <button class="workflow-node" onclick="showToolSummary('Backdoor')">
+            Backdoor
+          </button>
+          <button class="workflow-node" onclick="showToolSummary('Rootkit')">
+            Rootkit
+          </button>
+          <button class="workflow-node" onclick="showToolSummary('Trojan')">
+            Trojan
+          </button>
+          <button class="workflow-node" onclick="showToolSummary('RAT')">
+            RAT
+          </button>
+        </div>
+        <button
+          class="workflow-node"
+          id="nodePrivilegeEscalation"
+          onclick="showToolSummary('Privilege Escalation')"
+        >
+          Privilege Escalation
+        </button>
+        <div id="subBranchPrivilegeEscalation" class="workflow-sub-branch">
+          <button class="workflow-node" onclick="showToolSummary('Windows')">
+            Windows
+          </button>
+          <button class="workflow-node" onclick="showToolSummary('Linux')">
+            Linux
+          </button>
+          <button class="workflow-node" onclick="showToolSummary('Mac')">
+            Mac
+          </button>
+          <button class="workflow-node" onclick="showToolSummary('Unix')">
+            Unix
+          </button>
+        </div>
+      </div>
+
+      <button
+        class="workflow-node"
+        id="nodeAnalysis"
+        onclick="showToolSummary('Analysis')"
+      >
+        Analysis
+      </button>
+      <div id="branchAnalysis" class="workflow-branch">
+        <button
+          class="workflow-node"
+          id="nodeDataAnalysis"
+          onclick="showToolSummary('Data Analysis')"
+        >
+          Data Analysis
+        </button>
+        <div id="subBranchDataAnalysis" class="workflow-sub-branch">
+          <button
+            class="workflow-node"
+            onclick="showToolSummary('Forensic Toolkit')"
+          >
+            Forensic Toolkit
+          </button>
+          <button class="workflow-node" onclick="showToolSummary('Wireshark')">
+            Wireshark
+          </button>
+          <button class="workflow-node" onclick="showToolSummary('ELK Stack')">
+            ELK Stack
+          </button>
+          <button class="workflow-node" onclick="showToolSummary('Autopsy')">
+            Autopsy
+          </button>
+        </div>
+        <button
+          class="workflow-node"
+          id="nodeReportFindings"
+          onclick="showToolSummary('Report Findings')"
+        >
+          Report Findings
+        </button>
+        <div id="subBranchReportFindings" class="workflow-sub-branch">
+          <button
+            class="workflow-node"
+            onclick="showToolSummary('Documentation')"
+          >
+            Documentation
+          </button>
+          <button
+            class="workflow-node"
+            onclick="showToolSummary('Presentation')"
+          >
+            Presentation
+          </button>
+          <button
+            class="workflow-node"
+            onclick="showToolSummary('Client Meeting')"
+          >
+            Client Meeting
+          </button>
+          <button
+            class="workflow-node"
+            onclick="showToolSummary('Security Advisory')"
+          >
+            Security Advisory
+          </button>
+        </div>
+      </div>
+
+      <button
+        class="workflow-node"
+        id="nodePostEngagement"
+        onclick="showToolSummary('Post-Engagement')"
+      >
+        Post-Engagement
+      </button>
+      <div id="branchPostEngagement" class="workflow-branch">
+        <button
+          class="workflow-node"
+          id="nodeDebriefing"
+          onclick="showToolSummary('Debriefing')"
+        >
+          Debriefing
+        </button>
+        <div id="subBranchDebriefing" class="workflow-sub-branch">
+          <button
+            class="workflow-node"
+            onclick="showToolSummary('Internal Team')"
+          >
+            Internal Team
+          </button>
+          <button
+            class="workflow-node"
+            onclick="showToolSummary('External Team')"
+          >
+            External Team
+          </button>
+          <button class="workflow-node" onclick="showToolSummary('Client')">
+            Client
+          </button>
+          <button
+            class="workflow-node"
+            onclick="showToolSummary('Stakeholders')"
+          >
+            Stakeholders
+          </button>
+        </div>
+        <button
+          class="workflow-node"
+          id="nodeRemediation"
+          onclick="showToolSummary('Remediation')"
+        >
+          Remediation
+        </button>
+        <div id="subBranchRemediation" class="workflow-sub-branch">
+          <button
+            class="workflow-node"
+            onclick="showToolSummary('Recommendations')"
+          >
+            Recommendations
+          </button>
+          <button class="workflow-node" onclick="showToolSummary('Follow-up')">
+            Follow-up
+          </button>
+          <button
+            class="workflow-node"
+            onclick="showToolSummary('Verification')"
+          >
+            Verification
+          </button>
+          <button
+            class="workflow-node"
+            onclick="showToolSummary('Legal Actions')"
+          >
+            Legal Actions
+          </button>
+        </div>
+      </div>
+
+      <button
+      class="workflow-node"
+      id="nodeMisc"
+      onclick="showToolSummary('Misc')"
+    >
+      Misc
+    </button>
+    <div id="branchMisc" class="workflow-branch">
+      <button
+        class="workflow-node"
+        id="nodeAnonymity"
+        onclick="showToolSummary('Anonymity')"
+      >
+      Anonymity
+      </button>
+      <div id="subBranchAnonymity" class="workflow-sub-branch">
+        <button
+          class="workflow-node"
+          onclick="showToolSummary('Proxychains')"
+        >
+        Proxychains
+        </button>
+        <button
+          class="workflow-node"
+          onclick="showToolSummary('VPN')"
+        >
+          VPN
+        </button>
+        <button class="workflow-node" onclick="showToolSummary('Tor')">
+          Tor
+        </button>
+        <button
+          class="workflow-node"
+          onclick="showToolSummary('Macchanger')"
+        >
+        Macchanger
+        </button>
+      </div>
+      <button
+        class="workflow-node"
+        id="nodeLinks"
+        onclick="showToolSummary('Links')"
+      >
+        Links
+      </button>
+      <div id="subBranchLinks" class="workflow-sub-branch">
+        <button
+          class="workflow-node"
+          onclick="showToolSummary('IP blocks')"
+        >
+          IP blocks
+        </button>
+        <button class="workflow-node" onclick="showToolSummary('Databases')">
+          Databases
+        </button>
+        <button
+          class="workflow-node"
+          onclick="showToolSummary('GitHub')"
+        >
+        GitHub
+        </button>
+        <button
+          class="workflow-node"
+          onclick="showToolSummary('')"
+        >
+          Legal Actions
+        </button>
+      </div>
+    </div>
+
+      <p>
+        <br /><br />
+        <img src="/images/logo.png" class="wrapper" alt="MKNSec logo" />
+      </p>
+    </div>
+
+    <div id="text-display">
+      <!-- Textual display content goes here -->
+      <style>
+        pre {
+          text-align: center;
+        }
+      </style>
+      <pre>
+
+
+      . ..   .  . . .   .                ..=@@@@@@@@@@@@%:     . .      .            .              
+                      .               .@@@@@@@@@@@@@@@@@@@@@@#          .                      .  ..
+                                   .@@@@@@@@:. %@@@@@@@@#@@@@@@@*    .      .       . .    .    .   
+        .  .                     -@@@@@*         @@@@@@@@   .@@@@@@             .                   
+                   .    .      .@@@@@            @@@@@@@@@ .  .:@@@@%           .                   
+                ..  . ..      @@@@%   .   .+    @@@@@@@@@@    .   @@@@.                   .        .
+          ..                   #@          @@@@@@@@@@@@@@+         =@.    .       .                .
+.      .           .       .    . .         @@@@@@@@@@@@#    . . . .   .   .     . .     .  .    .  
+    .    .             .             .      .-@@@@@@@@@        .  .     .             .             
+  .   .                       .        . .         .    .                  .                        
+. .    .    .             .        .           .                   .     .                          
+          .            .           ..    ..  .     .   .        .                           .       
+             . . .          .       .             .        .          ....       .     .   .        
+ -@@@@@      -@@@@@     @@@+     @@@@-.  @@@@#      +@@@     #@@@@@@@@.   .   .              .      
+ *@@@@@%  . .@@@@@@.    @@@+   :@@@@   . @@@@@@     +@@@    @@@@:..%@@@@    .    .            .   . 
+ @@@@@@@.   @@@+@@@:    @@@+ .@@@@-      @@@@@@@    +@@@   .@@@.    .#:       -#%#:.    .   -#%*:   
+ @@@%.@@@  .@@@ @@@=    @@@%*@@@@        @@@--@@@   +@@@    @@@@@#.        =@@@@@@@@@ .  #@@@@@@@@@.
+ @@@* @@@# @@@. @@@#    @@@@@@@@         @@@- .@@@. +@@@      @@@@@@@@=   *@@@  . .@@@  @@@@    .@@@
+ @@@. .@@@@@@%. @@@@    @@@+ @@@@=    . .@@@-   @@@++@@@.      . . %@@@@  @@@@@@@@@@@@  @@@.  .     
+:@@@   :@@@@@   %@@@    @@@+  -@@@@.     @@@-    @@@@@@@  .@@@@     :@@@. @@@* .   ..   @@@=     .  
++@@@.   @@@@.   -@@@ .  @@@+.   @@@@:    @@@-     @@@@@@   .@@@@%--%@@@@ . @@@@: :@@@@  .@@@@. -@@@@
+%@@@    .@@@     @@@.   @@@+     @@@@@   @@@-      #@@@@     =@@@@@@@@:     +@@@@@@@. .   *@@@@@@@. 
+
+
+      </pre>
+      <pre>
+        
+
+{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}
+{}88888888888 888                   888       888 888      d8b 888                   888    888          888    d8b             8888888b.                    888{}
+{}    888     888                   888   o   888 888      Y8P 888                   888    888          888    88P             888  "Y88b                   888{}
+{}    888     888                   888  d8b  888 888          888                   888    888          888    8P              888    888                   888{}
+{}    888     88888b.   .d88b.      888 d888b 888 88888b.  888 888888 .d88b.         8888888888  8888b.  888888 "  .d8888b      888    888  .d88b.  88888b.  888{}
+{}    888     888 "88b d8P  Y8b     888d88888b888 888 "88b 888 888   d8P  Y8b        888    888     "88b 888       88K          888    888 d8P  Y8b 888 "88b 888{}
+{}    888     888  888 88888888     88888P Y88888 888  888 888 888   88888888 888888 888    888 .d888888 888       "Y8888b.     888    888 88888888 888  888 Y8P{}
+{}    888     888  888 Y8b.         8888P   Y8888 888  888 888 Y88b. Y8b.            888    888 888  888 Y88b.          X88     888  .d88P Y8b.     888  888  " {}
+{}    888     888  888  "Y8888      888P     Y888 888  888 888  "Y888 "Y8888         888    888 "Y888888  "Y888     88888P'     8888888P"   "Y8888  888  888 888{}
+{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}
+
+
+      </pre>
+    </div>
+
+    <script src="/TWHD/js/tree.js"></script>
+  </body>
+</html>

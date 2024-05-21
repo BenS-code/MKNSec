@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Logs for Forensic Analysis in Linux</title>
+  </head>
+  <body>
+    <h1>Logs for Forensic Analysis in Linux</h1>
+
+    <p>
+      In Linux systems, various logs are essential for forensic analysis as they
+      contain valuable information about system activities, user actions, and
+      potential security incidents.
+    </p>
+
+    <h2>Syslog</h2>
+    <p>
+      Syslog is a standard logging facility that collects messages from various
+      system components and applications. It's typically stored in
+      <code>/var/log/syslog</code> or <code>/var/log/messages</code>. Syslog
+      provides insights into system events, such as startup/shutdown times,
+      kernel messages, and application activities.
+    </p>
+
+    <h2>Auth.log</h2>
+    <p>
+      <code>Auth.log</code> (usually found in <code>/var/log/auth.log</code>)
+      records authentication-related events, including login attempts,
+      authentication failures, and user privilege escalation. It's crucial for
+      tracking unauthorized access attempts and potential security breaches.
+    </p>
+
+    <h2>Secure.log</h2>
+    <p>
+      Similar to <code>auth.log</code>, <code>secure.log</code> (often located
+      at <code>/var/log/secure</code>) logs authentication and
+      authorization-related events, focusing on system security. It contains
+      information about authentication attempts, password changes, and
+      user/group modifications.
+    </p>
+
+    <h2>Kernel Logs</h2>
+    <p>
+      Kernel logs, accessible through <code>dmesg</code> command output or
+      <code>/var/log/kern.log</code>, provide details about kernel-level
+      activities, hardware events, and driver issues. Analyzing kernel logs can
+      help identify hardware failures, system crashes, and potential security
+      vulnerabilities.
+    </p>
+
+    <h2>Audit.log</h2>
+    <p>
+      The Linux Audit Framework logs system-wide security events, including file
+      access, user/group modifications, and privilege changes. The audit log is
+      typically stored in <code>/var/log/audit/audit.log</code> and is crucial
+      for monitoring and investigating security-related incidents.
+    </p>
+
+    <h2>Apache/Nginx Access and Error Logs</h2>
+    <p>
+      Web server logs, such as Apache's <code>access.log</code> and
+      <code>error.log</code>, or Nginx's <code>access.log</code> and
+      <code>error.log</code>, record HTTP requests, server responses, and
+      errors. Analyzing web server logs can help detect suspicious activities,
+      such as unauthorized access attempts or web application attacks.
+    </p>
+
+    <h2>SSH Logs</h2>
+    <p>
+      Logs related to SSH (Secure Shell) connections, such as
+      <code>auth.log</code> or <code>secure.log</code>, document SSH login
+      attempts, session starts/ends, and authentication failures. Monitoring SSH
+      logs is essential for detecting unauthorized access attempts and potential
+      security breaches.
+    </p>
+
+    <h2>Application Logs</h2>
+    <p>
+      Various applications generate logs containing valuable information about
+      their activities, errors, and security events. These logs, typically
+      stored in <code>/var/log</code> or application-specific directories, can
+      provide insights into application behavior and potential security issues.
+    </p>
+
+    <h2>Sysdig/Falco Logs</h2>
+    <p>
+      Sysdig and Falco are container monitoring tools that capture system calls,
+      network activities, and container events. Analyzing Sysdig/Falco logs can
+      help detect abnormal behavior, intrusions, and security policy violations
+      within containerized environments.
+    </p>
+
+    <h2>Database Logs</h2>
+    <p>
+      Database servers like MySQL, PostgreSQL, or MongoDB generate logs
+      containing queries, transactions, and errors. Analyzing database logs can
+      reveal unauthorized access attempts, data manipulation attempts, and
+      potential security breaches.
+    </p>
+
+    <p>
+      These are some of the key logs used for forensic analysis in Linux
+      systems. Depending on the system configuration and installed applications,
+      additional logs may also be relevant for forensic investigations.
+    </p>
+  </body>
+</html>

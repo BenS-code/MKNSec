@@ -1,0 +1,135 @@
+/* body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 100vh;
+    margin: 0;
+    align-items: center;
+    font-family: sans-serif;
+    color:#000;
+  }
+
+.page-container {
+    text-align: center;
+    max-width: 800px;
+    width: 100%;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    
+  }
+
+img {
+     width: 200px;
+     height: 100px;
+     object-fit: contain;
+}
+
+header, footer {
+    border-radius: 0px;
+    width: 100%;
+    background-color: rgb(60, 65, 120);
+    color: #fff;
+    text-align: center;
+    padding: 0;
+}
+
+a {
+    color: #000;
+ }
+
+p {
+    padding: 30px;
+    font-size: 10px;
+ } 
+
+.menu-button {
+    display: inline-block;
+    height: auto;
+    width: 60px;
+    padding: 10px 10px;
+    background-color: rgb(55, 75, 80);
+    color: #fff;
+    text-decoration: none;
+    border: none;
+    border-radius: 30%;
+    font-size: 12px;
+    cursor: pointer;
+  }
+
+
+
+
+
+ */
+
+
+
+
+
+
+ body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 100vh;
+  margin: 0;
+  align-items: center;
+  font-family: sans-serif;
+  color: #000;
+}
+
+.page-container {
+  text-align: center;
+  padding: 0 20px; /* Add padding for better readability on smaller screens */
+  margin-top: 100px;
+  margin-bottom: 100px;
+  max-width: 100%; /* Adjust to fit the width of the screen */
+}
+
+img {
+  max-width: 100%; /* Ensure images don't overflow their containers */
+  height: auto; /* Maintain aspect ratio */
+}
+
+header, footer {
+  border-radius: 0px;
+  width: 100%;
+  background-color: rgb(60, 65, 120);
+  color: #fff;
+  text-align: center;
+  padding: 10px 0; /* Adjust padding for better spacing */
+}
+
+a {
+  color: #fff; /* Change link color for better visibility against the background */
+  text-decoration: none; /* Remove default underlines */
+}
+
+p {
+  padding: 15px 0; /* Adjust spacing for better readability */
+  font-size: 14px; /* Increase font size for better readability */
+}
+
+.menu-button {
+  display: inline-block;
+  height: auto;
+  width: 60px;
+  padding: 10px 10px;
+  background-color: rgb(55, 75, 80);
+  color: #fff;
+  text-decoration: none;
+  border: none;
+  border-radius: 30%;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 768px) {
+  .page-container {
+      padding: 0 10px; /* Adjust padding for smaller screens */
+  }
+
+  p {
+      font-size: 12px; /* Further reduce font size for smaller screens */
+  }
+}
